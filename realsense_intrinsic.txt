@@ -1,0 +1,17 @@
+Intrinsics:  [ 
+848x480  
+p[427.148 239.639]  
+f[428.453 428.453]  
+Brown Conrady [0 0 0 0 0] 
+]
+camera_intrinsic_o3d = o3d.camera.PinholeCameraIntrinsic(
+    width=640, height=480, 
+    fx=camera_intrinsic[0][0],
+    fy=camera_intrinsic[1][1], 
+    cx=camera_intrinsic[0][2], 
+    cy=camera_intrinsic[1][2])
+print(camera_intrinsic_o3d.intrinsic_matrix)
+
+[[772.10272217   0.         327.05437423]
+ [  0.         773.78594971 231.15509522]
+ [  0.           0.           1.        ]]
