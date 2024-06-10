@@ -5,8 +5,8 @@ import numpy as np
 
 # Load a MiDas model for depth estimation
 # model_type = "DPT_Large"     # MiDaS v3 - Large     (highest accuracy, slowest inference speed)
-model_type = "DPT_Hybrid"   # MiDaS v3 - Hybrid    (medium accuracy, medium inference speed)
-# model_type = "MiDaS_small"  # MiDaS v2.1 - Small   (lowest accuracy, highest inference speed)
+# model_type = "DPT_Hybrid"   # MiDaS v3 - Hybrid    (medium accuracy, medium inference speed)
+model_type = "MiDaS_small"  # MiDaS v2.1 - Small   (lowest accuracy, highest inference speed)
 
 midas = torch.hub.load("intel-isl/MiDaS", model_type)
 
@@ -52,7 +52,6 @@ while cap.isOpened():
 
     depth_map = cv2.normalize(depth_map, None, 0, 1, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_64F)
 
-
     end = time.time()
     totalTime = end - start
 
@@ -66,7 +65,6 @@ while cap.isOpened():
     cv2.putText(depth_map, f'FPS: {int(fps)}', (20,70), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0,255,0), 2)
     cv2.imshow('Image', img)
     cv2.imshow('Depth Map', depth_map)
-
 
     if cv2.waitKey(5) & 0xFF == 27:
         break
