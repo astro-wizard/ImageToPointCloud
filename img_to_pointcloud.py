@@ -4,7 +4,6 @@ import time
 import numpy as np
 import open3d as o3d
 
-
 # Load a MiDas model for depth estimation
 # model_type = "DPT_Large"     # MiDaS v3 - Large     (highest accuracy, slowest inference speed)
 # model_type = "DPT_Hybrid"   # MiDaS v3 - Hybrid    (medium accuracy, medium inference speed)
@@ -32,8 +31,6 @@ cap = cv2.VideoCapture(0)
 # Create an Open3D visualization window
 vis = o3d.visualization.Visualizer()
 vis.create_window("Open3D Visualization")
-
-
 
 # Initialize rotation angle
 rotation_angle = 0.0
