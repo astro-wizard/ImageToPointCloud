@@ -15,20 +15,22 @@ This project captures video from a webcam, estimates depth using a MiDaS model, 
 ## Installation
 ### Clone the repository:
 
-
+```bash
 git clone https://github.com/ImageToPointCloud.git
 
 cd your-repository
+```
 Install the required packages:
-
+```
 pip install opencv-python torch numpy open3d
-
+```
 Running the Code
 Open up a terminal in the project directory.
 
 Run the script:
+```
 python depth_estimation_visualization.py
-
+```
 ## Project Explanation
 The script captures video frames from a webcam, processes each frame to estimate depth, and visualizes the resulting point cloud in real-time.
 
