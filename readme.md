@@ -3,17 +3,14 @@
 This project captures video from a webcam, estimates depth using a MiDaS model, and visualizes the resulting point cloud in real-time using Open3D.
 
 ![""](images/3dreconstruct.PNG)
+![""](images/3dreconstruct2.PNG)
 
-* Prerequisites
+## Prerequisites
 * Python 3.6+
 * OpenCV
 * PyTorch
 * NumPy
 * Open3D
-
-
-
-
 
 ## Project Explanation
 The script captures video frames from a webcam, processes each frame to estimate depth, and visualizes the resulting point cloud in real-time.
